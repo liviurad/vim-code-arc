@@ -1,5 +1,5 @@
-" Vim Code Dark (airline theme)
-" https://github.com/tomasiser/vim-code-dark
+" Vim Code Arc (airline theme)
+" https://github.com/liviurad/vim-code-arc
 
 scriptencoding utf-8
 
