@@ -1,8 +1,9 @@
 Windows Registry Editor Version 5.00
 
-; Base16 codedark
+; Base16 codearc
 ; schema by Tomas Iser (https://github.com/tomasiser)
-[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\codedark]
+; modified by Liviu Radulescu (liviurad)
+[HKEY_CURRENT_USER\Software\SimonTatham\PuTTY\Sessions\codearc]
 
 ; Default Foreground
 "Colour0"="212,212,212"

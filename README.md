@@ -1,11 +1,19 @@
 # vim-code-arc
-`vim-code-arc` is a dark **color scheme for [Vim](http://www.vim.org/)** heavily inspired by the look of the Dark+ scheme of [Visual Studio Code](https://code.visualstudio.com/). While many of the colors are same, there are additional colors for specific usage or reserved for future use. The scheme also defines specific GUI colors (e.g. popup menu) and fully supports [`vim-airline`](https://github.com/vim-airline/vim-airline).
+`vim-code-arc` is a dark **color scheme for [Vim](http://www.vim.org/)** forked from `codedark` (https://github.com/tomasiser/vim-code-dark). Many of the colors are same, but there are some additional colors for specific usage / to improve readability.
+
+Colors changed from the original scheme:
+
+* Folded comments
+* Search and IncSearch highlithing
+* Todos
+
+The scheme also defines specific GUI colors (e.g. popup menu) and fully supports [`vim-airline`](https://github.com/vim-airline/vim-airline).
 
 **:exclamation: To install and enable this colorscheme, [read installation instructions](#installation).**
 
 *This colorscheme does also support 256 and 8/16 color terminals. See [installation instructions](#installation) step 3.*
 
-## Screenshots
+## Screenshots from original codedark scheme
 
 ### gVim / modern terminals
 ![Ruby and NERDTree](https://cloud.githubusercontent.com/assets/10374559/23333137/b86efaa0-fb86-11e6-8c06-813f81c1f9bb.png)
@@ -32,7 +40,7 @@
 Simply as any other Vim plugins: download manually or follow the standard procedure of your plugin manager:
 *  [Vundle](https://github.com/gmarik/vundle)
  ```
- Plugin 'liviurad/vim-code-dac'
+ Plugin 'liviurad/vim-code-arc'
  ```
 *  [vim-plug](https://github.com/junegunn/vim-plug)
 ```
@@ -47,13 +55,13 @@ Plug 'liviurad/vim-code-arc'
 Add the following line to your `.vimrc`:
 
 ```
-colorscheme codedark
+colorscheme codearc
 ```
 
 If you have [`vim-airline`](https://github.com/vim-airline/vim-airline), you can also enable the provided theme:
 
 ```
-let g:airline_theme = 'codedark'
+let g:airline_theme = 'codearc'
 ```
 
 ### 3) Terminal support
@@ -67,10 +75,10 @@ If your terminal supports 256 colors (see [this script](http://www.robmeerman.co
 ```
 set t_Co=256
 set t_ut=
-colorscheme codedark
+colorscheme codearc
 ```
 
-(Additionally, if you don't want to or cannot use `t_Co`, you can `let g:codedark_term256=1`.)
+(Additionally, if you don't want to or cannot use `t_Co`, you can `let g:codearc_term256=1`.)
 
 #### 3.3) If your terminal only supports 8/16 colors
 
@@ -85,7 +93,7 @@ Clone [`base16-shell`](https://github.com/chriskempson/base16-shell/) into `~/.c
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 ```
 
-Then copy a script from this (`vim-code-arc`) repository (`base16/templates/shell/scripts/base16-codedark.sh`) into `~/.config/base16-shell/scripts`.
+Then copy a script from this (`vim-code-arc`) repository (`base16/templates/shell/scripts/base16-codearc.sh`) into `~/.config/base16-shell/scripts`.
 
 Following the instructions from [`base16-shell`](https://github.com/chriskempson/base16-shell/), you should now modify your `~/.bashrc` or `~/.zshrc` (depending on your shell) and insert the following lines:
 
@@ -94,7 +102,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 ```
 
-Now start a new shell and type the following command: `base16_codedark`.
+Now start a new shell and type the following command: `base16_codedarc`.
 
 You should now be able to use Vim with your new colorscheme.
 
@@ -102,7 +110,7 @@ You should now be able to use Vim with your new colorscheme.
 iTerm2 should actually support 256 colors, try setting `Report Terminal Type` to `xterm-256color` and follow step 3.2). If it does not work, you can manually modify your terminal colors in settings (`CMD+i`, Colors tab) following the [color palette picture](#color-palette). You will have to choose which color to use as red, blue etc. according to your personal preferences.
 
 ##### 3.3.3) PuTTY
-PuTTY should actually support 256 colors, try following [steps on StackOverflow](http://superuser.com/questions/436910/emulate-256-colors-in-putty-terminal). If it does not work, run `base16/templates/putty/putty/base16-codedark.reg` to modify your registry, then run PuTTY and load `codedark` in the session list. This will modify your PuTTY terminal colors.
+PuTTY should actually support 256 colors, try following [steps on StackOverflow](http://superuser.com/questions/436910/emulate-256-colors-in-putty-terminal). If it does not work, run `base16/templates/putty/putty/base16-codearc.reg` to modify your registry, then run PuTTY and load `codedarc` in the session list. This will modify your PuTTY terminal colors.
 
 ## FAQ
 
@@ -111,15 +119,15 @@ Try resetting the `t_ut` value in your `.vimrc` as [described here](http://vi.st
 ```
 set t_Co=256
 set t_ut=
-colorscheme codedark
+colorscheme codearc
 ```
 
 ### What is and how to enable the conservative mode?
 If you don't like many colors and prefer the **conservative style of the standard Visual Studio**, you can try the conservative mode with reduced number of colors. To enable it, put the following line to your `.vimrc` *before* setting the scheme, like so:
 
 ```
-let g:codedark_conservative = 1
-colorscheme codedark
+let g:codearc_conservative = 1
+colorscheme codearc
 ```
 
 ### Something is broken but I know how to fix it!
